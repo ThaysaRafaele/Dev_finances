@@ -149,6 +149,7 @@ header{
 .card p{
     font-size: 2rem;
     line-height: 3rem;
+    white-space:nowrap;
     margin-top: 1rem;
 }
 
@@ -275,14 +276,14 @@ input{
     opacity: 0.4;
 }
 
-.input-group-actions{
+.input-group.actions{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.input-group-actions .button,
-.input-group-actions button{
+.input-group.actions .button,
+.input-group.actions button{
     width: 48%;
 }
 
