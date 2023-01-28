@@ -90,6 +90,8 @@ button:hover{
     border-radius: 0.25rem;
 
     height: 50px;
+
+    display: flex;
     align-items: center;
     justify-content: center;
 
@@ -229,6 +231,8 @@ td.expense{
 
     opacity: 0;
     visibility: hidden;
+
+    z-index: 999;
 }
 
 .modal-overlay.active{
@@ -239,6 +243,9 @@ td.expense{
 .modal{
     background: #F0F2f5;
     padding: 2.4rem;
+    
+    position: relative;
+    z-index: 1;
 }
 
 /* ************** FORM ************** */
