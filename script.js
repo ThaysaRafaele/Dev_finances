@@ -10,40 +10,30 @@ const Modal = {
 
 }
 
+const Storage = {
+    get(){
+        return JSON.parse(localStorage.getItem("dev.finances:transactions")) || [];
+    },
+
+    set(transactions){
+        localStorage.setItem("dev.finances:transactions",
+        JSON.stringify(transactions));
+    }
+}
+
 const Transaction = {
 
-    all: [
-        {
-            description: 'Luz',
-            amount: -50000,
-            date: '23/01/2023'
-        },
-        {
-            description: 'Website',
-            amount: 500000,
-            date: '23/01/2023'
-        },
-        {
-            description: 'Internet',
-            amount: -20000,
-            date: '23/01/2023'
-        },
-        {
-            description: 'Mercado',
-            amount: -50000,
-            date: '23/01/2023'
-        },
-    ],
+    all: Storage.get(),
 
     add(transaction){
         Transaction.all.push(transaction);
         
-        console.log(Transaction.all)
         App.reload();
     },
 
     remove(index){
         Transaction.all.splice(index, 1);
+
         App.reload();
     },
 
@@ -78,7 +68,7 @@ const DOM = {
     addTransaction(transaction, index){
         const tr = document.createElement('tr');
         tr.innerHTML = DOM.innerHTMLTransaction(transaction, index);
-        tr.innerHTML.index = index;
+        tr.dataset.index = index;
 
         DOM.transactionsContainer.appendChild(tr);
     },
@@ -199,8 +189,6 @@ const Form = {
 
             const transaction = Form.formatData(); //pegar a transação formatada  
 
-            console.log(transaction)
-
             Form.saveTransaction(transaction); //adicionar transação
 
             Form.clearFields(); //limpar campos do formulário
@@ -218,6 +206,8 @@ const App = {
         Transaction.all.forEach(DOM.addTransaction);
 
         DOM.updateBalance();
+
+        Storage.set(Transaction.all);
     },
 
     reload(){
@@ -227,3 +217,27 @@ const App = {
 }
 
 App.init();
+
+//teste dados estáticos
+// [
+    // {
+    //     description: 'Luz',
+    //     amount: -50000,
+    //     date: '23/01/2023'
+    // },
+    // {
+    //     description: 'Website',
+    //     amount: 500000,
+    //     date: '23/01/2023'
+    // },
+    // {
+    //     description: 'Internet',
+    //     amount: -20000,
+    //     date: '23/01/2023'
+    // },
+    // {
+    //     description: 'Mercado',
+    //     amount: -50000,
+    //     date: '23/01/2023'
+    // },
+// ]
