@@ -1,6 +1,7 @@
 # Dev_finances
 
-Criação de uma aplicação web simples como um mini sistema financeiro com HTML, CSS e JS  (apenas em nível de frontend, para estudo e aperfeiçoamento pessoal), que calcula a entrada e saída monetária.
+Criação de uma aplicação web simples como um mini sistema financeiro (apenas em nível de frontend e usando localStorage para salvar, para estudo e aperfeiçoamento pessoal):
+<br>O dev.finances é uma aplicação de controle financeiro, onde é possível cadastrar e excluir transações e ver o saldo de entrada e saída<br>
 <br>Tecnologias utilizadas:
 * HTML 
 (Estrutura base, tags semânticas, imagens, acessibilidade, responsividade, formulários, modal)
