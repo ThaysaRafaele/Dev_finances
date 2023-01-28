@@ -39,6 +39,7 @@ const Transaction = {
         Transaction.all.push(transaction);
         
         console.log(Transaction.all)
+        App.reload();
     },
 
     remove(index){
