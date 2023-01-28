@@ -11,7 +11,7 @@ Criação de uma aplicação web simples como um mini sistema financeiro (apenas
 (Objetos, Tipos e estrutura de dados, estrutura condicional, tratativa de erros, funcionalidades, cálculos aritméticos, Salvar no localStorage)
 
 
-Aplicação disponível na url: https://celebrated-sherbet-c09c29.netlify.app/
+Aplicação disponível na url: https://thaysarafaele.github.io/Dev_finances/#
 <br><br>
 ![image](https://user-images.githubusercontent.com/83955839/215289167-698cfa8c-0331-478d-8f4c-932f3e2bc952.png)
 
